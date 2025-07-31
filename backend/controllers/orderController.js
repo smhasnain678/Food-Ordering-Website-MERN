@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const placeOrder = async (req, res) => {
     console.log("userId in placeOrder:", req.body.userId);
-    const frontend_url = "http://localhost:5173"
+    const frontend_url = "http://localhost:5174"
     try {
         const newOrder = new orderModel({
             userId:req.body.userId,
