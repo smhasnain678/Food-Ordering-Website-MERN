@@ -1,0 +1,158 @@
+.order {
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.order-title {
+  font-size: 2rem;
+  color: #1a5d1a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-loading,
+.order-error,
+.order-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.order-error {
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.order-list {
+  overflow-x: auto;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+  background-color: #fff;
+  border-left: 5px solid #1a5d1a;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #505050;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.order-item:hover .order-image {
+  transform: scale(1.1);
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.order-item-name {
+  margin-top: 10px;
+}
+
+.order-item-address {
+  margin: 5px 0;
+  color: #666;
+}
+
+.order-item-address p {
+  margin: 2px 0;
+}
+
+.order-item-phone {
+  margin: 5px 0;
+  color: #777;
+}
+
+.order-item-count,
+.order-item-amount {
+  text-align: center;
+  font-weight: 500;
+}
+
+.order-status {
+  background-color: #edffee;
+  border: 1px solid #1a5d1a;
+  width: max(12vw, 120px);
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  color: #1a5d1a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-status:hover {
+  background-color: #d4f0d4;
+}
+
+@media (max-width: 1000px) {
+  .order {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .order-title {
+    font-size: 1.5rem;
+  }
+
+  .order-item {
+    font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+  }
+
+  /* .order-item-count,
+  .order-item-amount {
+    display: none; 
+  } */
+
+  .order-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .order-status {
+    width: max(15vw, 100px);
+    padding: 5px;
+    font-size: 12px;
+  }
+}

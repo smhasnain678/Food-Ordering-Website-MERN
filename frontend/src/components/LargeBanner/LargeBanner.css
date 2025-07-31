@@ -1,0 +1,215 @@
+.largerbanner-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  /* Full viewport height */
+  background-image: url('../../assets/foodorder-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  /* Minimum height for smaller screens */
+}
+
+.bigbanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+.largerbanner-container .bigbanner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  /* Full width on mobile */
+  padding: 20px;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+}
+
+.bigbanner-text .first-text {
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFD700;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bigbanner-text p {
+  font-weight: 300;
+  margin: 10px 0;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bigbanner-text h1 {
+  font-size: 3.5rem;
+  line-height: 60px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bigbanner-text .disc-text {
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  background: #FF4C4C;
+  font-weight: 600;
+  align-self: flex-start;
+  padding: 10px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bigbanner-text button {
+  align-self: flex-start;
+  background: #FFD700;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+  color: #1A1A1A;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bigbanner-text button:hover {
+  background: #fff;
+  color: #FFD700;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+}
+
+.bigbanner-text button:active {
+  transform: translateY(0);
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-button {
+  transition: all 0.3s ease;
+}
+
+/* Tablet View (768px and above) */
+@media (min-width: 768px) {
+  .largerbanner-container {
+    height: 80vh;
+    min-height: 600px;
+  }
+
+  .largerbanner-container .bigbanner-text {
+    width: 50%;
+    padding: 30px;
+  }
+
+  .bigbanner-text h1 {
+    font-size: 3.5rem;
+    line-height: 60px;
+  }
+
+  .bigbanner-text .first-text {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+
+  .bigbanner-text p {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .bigbanner-text .disc-text {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .bigbanner-text button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* Desktop View (1024px and above) */
+@media (min-width: 1024px) {
+  .largerbanner-container {
+    height: 100vh;
+  }
+
+  .largerbanner-container .bigbanner-text {
+    width: 40%;
+    padding: 40px;
+  }
+
+  .bigbanner-text h1 {
+    font-size: 5.5rem;
+    line-height: 85px;
+  }
+
+  .bigbanner-text .first-text {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  .bigbanner-text p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .bigbanner-text .disc-text {
+    font-size: 22px;
+    padding: 15px 25px;
+  }
+
+  .bigbanner-text button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

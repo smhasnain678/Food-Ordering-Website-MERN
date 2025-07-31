@@ -1,0 +1,640 @@
+.banner-container {
+    align-items: center;
+    padding: 10vw 0;
+}
+
+.banner-container .banner {
+    justify-content: space-between;
+}
+
+.upper-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.upper-image-one {
+    min-width: 740px;
+    height: 50vh;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: right;
+    background-image: url('../../assets/banner_1.jpg');
+    transition: 0.3s;
+    padding: 30px;
+    gap: 20px;
+}
+
+.upper-image-one h1 {
+    align-items: left;
+    font-size: 40px;
+    color: white;
+}
+
+.upper-image-one span {
+    font-weight: 600;
+    font-size: 20px;
+    color: #E5C000;
+}
+
+.upper-image-one img {
+    background-size: cover;
+}
+
+.upper-image-one:hover {
+    background-position: left;
+}
+
+#upper-img button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#upper-img button {
+    --primary-color: white;
+    --hovered-color: #E5C000;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#upper-img button p {
+    margin: 0;
+    position: relative;
+    color: var(--primary-color);
+}
+
+#upper-img button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+#upper-img button p::before {
+    position: absolute;
+    content: "Subscribe";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+#upper-img button:hover::after {
+    width: 100%;
+}
+
+#upper-img button:hover p::before {
+    width: 100%;
+}
+
+#upper-img button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+#upper-img button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+.upper-image-two {
+    background: #FADA7A;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 50vh;
+    text-align: right;
+    align-items: flex-end;
+    transition: 0.3s;
+    padding: 0px 5px 0px 20px;
+}
+
+.upper-image-two img {
+    position: relative;
+    right: 30%;
+    transition: 0.3s;
+}
+
+.upper-image-two:hover .two-img {
+    right: 40%;
+}
+
+#up-img h1 {
+    align-items: left;
+    font-size: 35px;
+    font-weight: 600;
+    color: #1A5D1A;
+    width: 50%;
+    text-align: start;
+    line-height: 50px;
+}
+
+.down-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.down-banner .down-image-one {
+    display: flex;
+    width: 25%;
+    height: 50vh;
+    background: #E35F22;
+    overflow: hidden;
+    flex-wrap: wrap;
+    transition: transform 0.5s ease-in-out, flex 0.5s ease-in-out;
+    padding: 0px 5px 0px 20px;
+}
+
+.down-image-one img {
+    right: 5%;
+    transition: 0.3s ease;
+    position: relative;
+
+}
+
+.down-image-one:hover .one-img {
+    transform: rotate(-18deg);
+}
+
+.banner-text h1 {
+    padding-top: 15px;
+    color: #fbe5a3;
+}
+
+.banner-text h3 {
+    color: #fff;
+    margin-top: 5px;
+}
+
+.down-banner .down-image-two {
+    width: 25%;
+    height: 50vh;
+    background: #EFE3C2;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#below-img-two button {
+    padding: 0;
+    margin: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#below-img-two button {
+    --primary-color: #E35F22;
+    --hovered-color: #E35F22;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+#below-img-two button p {
+    margin: 0;
+    position: relative;
+    color: var(--primary-color);
+}
+
+#below-img-two button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+#below-img-two button p::before {
+    position: absolute;
+    content: "Subscribe";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+#below-img-two button:hover::after {
+    width: 100%;
+}
+
+#below-img-two button:hover p::before {
+    width: 100%;
+}
+
+#below-img-two button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+#below-img-two button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+#below-img-two .do-img-txt {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fefefe;
+    padding: 60px 30px 60px 30px;
+}
+
+#below-img-two .do-img-txt:hover {
+    border: 1px solid #E5C000;
+}
+
+#below-img-two .do-img-txt h1 {
+    padding: 15px 0 15px 0px;
+    color: #E35F22;
+}
+
+#below-img-two .do-img-txt p {
+    color: #eaa787;
+}
+
+.down-image-three {
+    width: 48%;
+    position: relative;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-image: url('../../assets/banner_3.jpg');
+    transition: 0.5s ease;
+    padding-left: 30px;
+    gap: 20px;
+}
+
+.down-image-three h1 {
+    color: #fff;
+    width: 50%;
+    line-height: 50px;
+    margin-top: 60px;
+    text-align: left;
+
+}
+
+.down-image-three img {
+    background-size: cover;
+}
+
+.down-image-three:hover {
+    background-position: left;
+}
+
+
+#below-img-three button {
+    padding: 0;
+    margin-top: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: margin 0.3s ease, opacity 0.3s ease;
+}
+
+#below-img-three:hover button {
+    margin-top: 0;
+    opacity: 1;
+}
+
+#below-img-three button {
+    --primary-color: white;
+    --hovered-color: #E5C000;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#below-img-three button p {
+    margin: 0;
+    position: relative;
+    color: var(--primary-color);
+}
+
+#below-img-three button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+#below-img-three button p::before {
+    position: absolute;
+    content: "Subscribe";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+#below-img-three button:hover::after {
+    width: 100%;
+}
+
+#below-img-three button:hover p::before {
+    width: 100%;
+}
+
+#below-img-three button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+#below-img-three button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+@media (max-width: 1024px) {
+    .upper-image-one {
+        height: 40vh;
+        min-width: 480px;
+        gap: 30px;
+    }
+
+    #up-img {
+        width: 425px;
+        height: 40vh;
+    }
+
+    #up-img h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .down-banner {
+        margin-top: 20px;
+    }
+
+    .down-banner .down-image-one {
+        height: 40vh;
+        display: flex;
+    }    
+    .banner-text h3 {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .down-image-one .one-img {
+        height: 200px;
+    }
+    .down-banner .down-image-two {
+        height: 40vh;
+    }
+    #below-img-two .do-img-txt h1 {
+        font-size: 25px;
+        padding: 15px 0 15px 0px;
+        color: #E35F22;
+    }
+    
+    #below-img-two .do-img-txt p {
+        color: #eaa787;
+    }
+    .down-image-three {
+        height: 40vh;
+        width: 46%;
+    }
+    .down-image-three h1 {
+        font-size: 35px;
+        width:65%;
+        line-height: 40px;
+    }
+    .down-image-three img {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    .upper-banner .upper-image-one {
+        height: 50vh;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    .upper-banner .upper-image-one h1 {
+        font-size: 40px;
+    }
+    .upper-banner .upper-image-one span {
+        font-size: 20px;
+    }
+    .upper-banner #up-img {
+        height: 50vh;
+    }
+    .upper-image-two img {
+        right: 0;
+    }
+    .upper-image-two:hover .two-img {
+        right: 3%;
+    }
+    .down-banner .down-image-one {
+        height: 50vh;
+    }    
+    .banner-text h1{
+        font-size: 40px;
+    }
+    .banner-text h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .down-image-one img{
+        left: 30%;
+    }
+    .down-image-one .one-img {
+        height: 250px;
+    }
+    .down-banner .down-image-two {
+        height: 50vh;
+    }
+    #below-img-two .do-img-txt {
+        padding: 40px 210px 40px 210px;
+    }
+    #below-img-two .do-img-txt h1 {
+        font-size: 40px;
+    }
+    .down-banner .down-image-three {
+        align-items: start;
+        height: 50vh;
+    }
+    .down-banner .down-image-three h1 {
+        margin: 0;
+        font-size: 40px;
+        width: 50%;
+        line-height: 50px;
+    }
+}
+
+/* Styles for Mobile Devices (below 768px) */
+@media (max-width: 767px) {
+    .banner-container {
+        padding: 5vw 0;
+    }
+    .upper-banner,
+    .down-banner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .upper-image-one,
+    .upper-image-two,
+    .down-image-one,
+    .down-image-two,
+    .down-image-three {
+        min-width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .upper-image-one h1,
+    .upper-image-two h1,
+    .down-image-three h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .upper-image-one span {
+        font-size: 14px;
+    }
+    #upper-img button,
+    #below-img-two button,
+    #below-img-three button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .down-image-three:hover {
+        background-position: center;
+    }
+}
+
+/* Additional Styles for Small Mobile Devices (below 480px) */
+
+@media (max-width:768px) {
+    .upper-banner .upper-image-one {
+        min-width: 400px !important;
+    }
+     .upper-banner #up-img{
+        width: 275px;
+    }
+}
+
+@media (max-width: 480px) {
+    .upper-banner .upper-image-one {
+        width: 100px;
+        height: 40vh;
+        gap: 30px;
+    }
+    .upper-banner .upper-image-one h1{
+        font-size: 45px;
+    }
+    .upper-banner .upper-image-one span {
+        font-size: 25px;
+    }
+    .upper-banner #upper-img button{
+        font-size: 18px;
+    }
+    .upper-banner #up-img{
+        height: 40vh;
+        width: 100px;
+    }
+    .upper-image-two img {
+        right: 20%;
+    }
+    .upper-image-two:hover .two-img {
+        right: 30%;
+    }
+    .upper-banner #up-img h1{
+        font-size: 45px;
+    }
+    .down-banner .down-image-one {
+        height: 40vh;
+    } 
+    .banner-text h1{
+        font-size: 45px;
+    }
+    .banner-text h3 {
+        font-size: 23px;
+    }
+    .down-banner .down-image-two {
+        height: 40vh;
+    }
+    #below-img-two .do-img-txt {
+        padding: 60px 30px 60px 30px;
+    }
+    .down-banner .down-image-three {
+        height: 40vh;
+    }
+    .down-banner .down-image-three h1 {
+        width: 70%;
+    }
+    #below-img-two .do-img-txt h1 {
+        font-size: 45px;
+    }
+    .down-image-three h1 {
+        font-size: 30px;
+        line-height: 25px;
+    }
+
+    .upper-image-one span {
+        font-size: 12px;
+    }
+
+    .upper-image-one,
+    .upper-image-two,
+    .down-image-three {
+        padding: 10px;
+    }
+
+    #upper-img button,
+    #below-img-two button,
+    #below-img-three button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .down-image-one img,
+    .upper-image-two img {
+        width: 100%;
+    }
+}
+

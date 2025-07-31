@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.header {
+  height: 40vw;
+  min-height: 320px;
+  margin: 2rem auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/header-bg.jpeg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 2.5rem 3rem;
+  max-width: 50%;
+  text-align: center;
+  color: #fff;
+}
+
+.header-contents h2 {
+  font-size: max(3.5vw, 2.2rem);
+  font-weight: 700;
+  background: linear-gradient(to right, #E5C000, #ff6f00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: slideUp 1s ease-out;
+}
+
+.header-contents span {
+  font-size: max(1.5vw, 1.3rem);
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.95;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1.2s ease-out;
+}
+
+.header-contents p {
+  font-size: max(1vw, 0.95rem);
+  color: #e0e0e0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1.4s ease-out;
+}
+
+.header-contents button {
+  background: linear-gradient(90deg, #1a3c34 0%, #2ecc71 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 0.9rem 2rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  animation: slideUp 1.6s ease-out;
+}
+
+.header-contents button:hover {
+  background: linear-gradient(90deg, #2ecc71 0%, #1a3c34 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.header-contents button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 50vw;
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+
+  .header-contents {
+    max-width: 70%;
+    padding: 2rem;
+    gap: 1.2rem;
+  }
+
+  .header-contents h2 {
+    font-size: max(3vw, 1.9rem);
+  }
+
+  .header-contents span {
+    font-size: max(1.2vw, 1.1rem);
+  }
+
+  .header-contents p {
+    font-size: max(0.9vw, 0.85rem);
+    max-width: 90%;
+  }
+
+  .header-contents button {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    height: 60vw;
+    min-height: 220px;
+    justify-content: center;
+  }
+
+  .header-contents {
+    max-width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header-contents h2 {
+    font-size: max(4vw, 1.7rem);
+  }
+
+  .header-contents span {
+    font-size: max(2vw, 1rem);
+  }
+
+  .header-contents p {
+    display: none;
+    font-size: max(1.5vw, 0.8rem);
+    max-width: 85%;
+  }
+
+  .header-contents button {
+    padding: 0.4rem 1rem;
+    font-size: 0.5rem;
+  }
+}

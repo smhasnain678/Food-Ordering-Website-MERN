@@ -1,0 +1,124 @@
+/* Food Item Styles */
+.food-item {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: auto;
+  gap: 30px;
+  background-color: #fff;
+}
+
+.item-img-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item-img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.food-item-info {
+  text-align: left;
+}
+
+/* .food-item-name {
+  font-size: 21px;
+  font-weight: bold;
+} */
+
+.item-name-ranking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-name-ranking p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.food-item-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.price-cart {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.food-item-price {
+  color: #e5c000;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.counter-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.plus-btn {
+  background: #4caf50;
+  color: #fff;
+}
+
+.basket-btn {
+  background: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #4caf50;
+  padding: 10px 13px;
+  border-radius: 50%;
+  border: 1px solid #4caf50;
+  transition: 0.3s;
+}
+
+.basket-btn:hover {
+  background: #4caf50;
+  color: #fff;
+}
+
+.remove-btn {
+  background: #e53935;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+.item-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+

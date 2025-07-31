@@ -1,0 +1,275 @@
+/* Slider container */
+.slider-container {
+  padding-bottom: 10vw;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-container .left-content{
+  padding: 0px 20px 0px 20px;
+  width: 60%;
+}
+.left-content h1{
+  margin-bottom: 30px;
+  color: #1A5D1A;
+  font-size: 35px;
+}
+
+.left-content p{
+  font-weight: light;
+  font-size: 15px;
+  color: #818181;
+  line-height: 25px;
+}
+
+.custom-navigation {
+  top: 50px; 
+  display: flex; 
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: white;
+  color: black;
+  border: 1px solid rgb(111, 111, 111);
+  border-radius: 50px;
+  padding: 25px 25px;
+  font-weight: light;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next{
+  left: 30%;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #1A5D1A;
+  color: #fff;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  /* width: 250px;
+  margin: 1rem; */
+}
+
+.hover-icons {
+  position: absolute;
+  bottom: 100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.hover-icons i {
+  background: #fff;
+  color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card:hover .hover-icons {
+  bottom: 10vw;
+  opacity: 1;
+}
+
+.card:hover .hover-icons i:hover {
+  color: #fff;
+  background: #E5C000;
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card:hover img{
+  transform: translateY(-5px);
+}
+
+.card-details {
+  padding-top: 1.5rem;
+}
+.card-details hr{
+  width: 35%;
+  margin: auto;
+  transition: all 0.3s;
+}
+.card:hover hr{
+  width: 60%;
+}
+
+.card-name {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  color: #E5C000;
+  margin: 1rem 0rem;
+  font-weight: 600;
+}
+
+.slider-btn {
+  padding-top: 10px;
+  margin: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.card-details .slider-btn {
+  --primary-color: #1A5D1A;
+  --hovered-color: #E5C000;
+  position: relative;
+  display: flex;
+  font-size: 10px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.slider-btn p {
+  margin: 0;
+  position: relative;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.slider-btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.slider-btn p::before {
+  position: absolute;
+  content: "Subscribe";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.slider-btn:hover::after {
+  width: 100%;
+}
+
+.slider-btn:hover p::before {
+  width: 100%;
+}
+
+.slider-btn:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.slider-btn svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+@media (max-width:1024px){
+  .left-content h1{
+    margin-bottom: 20px;
+  }
+  .custom-navigation {
+    margin: 1.5rem 0rem;
+    top: 30px; 
+  }
+  .swiper-button-next{
+    left: 40%;
+  }
+  .slide .card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+      height: 150px;
+  }
+
+  .swiper{
+    width: 100%;
+  }
+
+  .slider-container .left-content{
+    width: 100%;
+  }
+  .left-content .custom-navigation {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0rem;
+    top: 0px; 
+  }
+  .swiper-button-next{
+    left: 10%;
+  }
+ 
+  .card-name {
+      font-size: 1rem;
+  }
+}
+
+
+@media (max-width:767px){
+  .left-content .custom-navigation {
+    top: 10px;
+    left: 80%;
+    transform: translateX(-50%);
+  }
+  .swiper-button-next{
+    left: 20%;
+  }
+  .slider-container{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-container .left-content{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px 0px 20px;
+  }
+}
+/* @media (max-width:768px){} */
+
+

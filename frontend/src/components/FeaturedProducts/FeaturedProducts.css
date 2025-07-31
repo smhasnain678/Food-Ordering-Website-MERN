@@ -1,0 +1,190 @@
+.featured-container {
+    /* height: 90vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0rem;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.featured-title {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+    padding: 0rem 2rem;
+    color: #1A5D1A;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.featured-title::after,
+.featured-title::before {
+    content: "";
+    height: 1px;
+    /* width: 50%; */
+    background-color: #E8E8E8;
+    /* display: block; */
+}
+
+.side-banner {
+    background-image: url('../../assets/feature.jpg');
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 25%;
+    padding: 4rem 2rem;
+    /* transition: all 0.3s ease; */
+    background-position: right;
+    transition: all 0.3s ease, background-size 0.3s ease;
+    background-size: 100%;
+    position: relative;
+    /* For pseudo-element positioning */
+    overflow: hidden;
+    /* Ensures the pseudo-element stays within the banner */
+    /* padding: 4rem 2rem 4rem 2rem; */
+}
+
+.side-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.side-banner:hover::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Adds a light black shadow on hover */
+}
+
+.side-banner:hover {
+    background-size: 110%;
+}
+
+.side-banner p {
+    z-index: 2;
+    position: relative;
+    color: #1A5D1A;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.side-banner h1 {
+    z-index: 2;
+    position: relative;
+    color: #ffff;
+    font-size: 30x;
+}
+
+.products-item {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #E1E1E1;
+}
+
+/* .products-images{
+    align-items: center;
+    justify-content: flex-start;
+} */
+.featured-desc {
+    /* padding: 0rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featured-desc .feature-name {
+    font-size: 15px;
+    color: #1A5D1A;
+}
+
+.featured-desc .feature-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A5D1A;
+}
+
+/* .featured-desc p{
+    font-weight: 500;
+} */
+
+.products {
+    /* background: #efe8e8; */
+    /* padding: 1rem 0rem; */
+    width: 60%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.products .products-images {
+    width: 80px;
+}
+
+.featured-desc .rating {
+    margin-right: 48%;
+}
+
+@media (max-width: 1024px) {
+    .featured-container{
+        padding: 4rem 0rem;
+    }
+
+    .featured-title {
+        justify-content: center;
+    }
+    .side-banner {
+        height: 65vh;
+    }
+    .featured-desc {
+        gap: 7px;
+    }
+    .featured-desc .feature-name {
+        font-size: 14px;
+    }
+    .featured-desc .feature-price {
+        font-size: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .featured-container{
+        padding: 4rem 0rem;
+    }
+
+    .featured-title {
+        justify-content: center;
+    }
+    .side-banner {
+        display: none;
+    }
+    .featured-desc {
+        gap: 10px;
+        margin-left: 25px;
+    }
+    .featured-desc .feature-name {
+        font-size: 14px;
+    }
+    .featured-desc .feature-price {
+        font-size: 15px;
+    }
+    .products {
+        border:none; 
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .featured-desc .rating {
+        margin-right: 57%;
+    }
+    
+}

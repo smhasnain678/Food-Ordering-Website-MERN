@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  background: linear-gradient(90deg, #1a5d1a, #2e7d32);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: max(20%, 80px);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo svg {
+  color: #e5c000;
+  font-size: 1.5rem;
+}
+
+.profile {
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .logo {
+    width: max(100%, 80px);
+    font-size: 5vw;
+  }
+
+  .profile {
+    width: 40px;
+  }
+}

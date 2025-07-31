@@ -1,0 +1,147 @@
+.list {
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.list-title {
+  font-size: 2rem;
+  color: #1a5d1a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.list-loading,
+.list-error,
+.list-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.list-error {
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.list-table {
+  overflow-x: auto;
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.list-table-format.title {
+  background: linear-gradient(90deg, #1a5d1a, #2e7d32);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+/* .list-table-format:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.list-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* .list-table-format:hover .list-image {
+  transform: scale(1.1);
+} */
+
+.list-name,
+.list-category,
+.list-price,
+.list-action {
+  /* text-align: center; */
+  font-weight: 500;
+}
+
+.list-action {
+  color: #d32f2f;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.list-action:hover {
+  color: #b71c1c;
+}
+
+/* Enhanced Responsive Styles */
+@media (max-width: 600px) {
+  .list {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .list-title {
+    font-size: 1.5rem;
+  }
+
+  .list-table-format {
+    grid-template-columns: 1fr; /* Stack all items vertically */
+    gap: 10px;
+    padding: 12px 15px;
+    font-size: 12px;
+    border: 1px solid #cacaca; /* Maintain border for clarity */
+  }
+
+  .list-table-format.title {
+    display: grid; /* Show title bar */
+    grid-template-columns: 1fr; /* Stack titles vertically */
+    background: linear-gradient(90deg, #1a5d1a, #2e7d32);
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+  }
+
+  .list-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .list-name,
+  .list-category,
+  .list-price,
+  .list-action {
+    margin: 5px 0; /* Add spacing between stacked items */
+  }
+
+  .list-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .list-action {
+    font-size: 0.9rem;
+  }
+}
